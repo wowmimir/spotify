@@ -27,7 +27,7 @@ const playmusic = (c) => {
 
 async function getsongs(folder) {
     curfolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${curfolder}/`);
+    let a = await fetch(`/${curfolder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response
@@ -69,7 +69,7 @@ async function getsongs(folder) {
 }
 
 async function disal() {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`)
+    let a = await fetch(`/songs/`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -79,7 +79,7 @@ async function disal() {
         const e = ar[i];
         if (e.href.includes("/songs/")) {
             let folder = (e.href.split("/")[4])
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
+            let a = await fetch(`/songs/${folder}/info.json`)
             let response = await a.json();
             document.querySelector(".cardcont").innerHTML = document.querySelector(".cardcont").innerHTML + `<div class="card" data-folder = "${folder}">
                         <img src="/songs/${folder}/cover.jpg" alt="">
