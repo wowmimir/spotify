@@ -1,0 +1,56 @@
+.border {
+    border: 2px solid red;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+.color {
+    background-color: #121212;
+    border-radius: 8px;
+    color: white;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    /* Dark color for the thumb */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+    /* Dark color for the track */
+}
+
+.content {
+    display: flex;
+}
+
+button>* {
+    margin: 0 12px;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
